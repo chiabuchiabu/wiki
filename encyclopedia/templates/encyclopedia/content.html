@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ titlein }} - Wiki
+{% endblock %}
+
+{% block body %}
+    {% if contents %}
+    <form action="{% url 'edit_page' %}" method="post">
+        {% csrf_token %}
+        {{ contents|safe }}
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" value="{{ titlein }}" name="edit_title">
+        <input type="hidden" value="{{ contento }}" name="edit_content">
+        <input type="submit" value="Edit">       
+    </form>        
+    {% else %}     
+        <h2>Page is not found</h2>
+    {% endif %}    
+{% endblock %}

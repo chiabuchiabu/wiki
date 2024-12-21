@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Searching something
+{% endblock %}
+
+{% block body %}
+    
+    {% if search_n %}
+    <h3> Search "{{ search_query }}", You may want to search ...</h3>
+        {% for query in search_n %}
+        <a href="{{ query }}"><li>{{ query }}</li></a>
+        {%  endfor %}
+    {% else %}
+       <h3> No relevant results found with "{{ search_query }}"</h3>
+    {% endif %}    
+
+
+{% endblock %}
