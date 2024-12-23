@@ -1,2 +1,2 @@
 #Arduino
-A electronic board
+A electronic board good to use
