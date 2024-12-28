@@ -1,3 +1,3 @@
 # Hello Kitty
 
-A cute **Kitty** without mouth
+A cute **Kitty** without mouth.

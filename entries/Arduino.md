@@ -1,3 +1,3 @@
 # Arduino
 
-A electronic board good to use
+An electronic board good to use
